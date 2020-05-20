@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class MayinTarlasi {
 	public static void main(String args[]) {
 		Scanner s=new Scanner(System.in);
-		System.out.println("Oynamak istediğin tarlanın en ve boy değerlerini sırasıyla gir:");
+		System.out.println("Oynamak istediÄŸin tarlanÄ±n en ve boy deÄŸerlerini sÄ±rasÄ±yla gir:");
 		int en=s.nextInt();
 		int boy=s.nextInt();
 		int [][] matris =new int [en][boy];
@@ -22,7 +22,7 @@ public class MayinTarlasi {
 				kontrolmatrisi[i][j]=0;
 			}
 		}
-		System.out.println("İşte tarlanın haritası dikkatli ol ve en yuksek puanı topla!");
+		System.out.println("Ä°ÅŸte tarlanÄ±n haritasÄ± dikkatli ol ve en yuksek puanÄ± topla!");
 		for(int i=0;i<en;i++) {
 			for(int j=0;j<boy;j++) {
 				System.out.print(" "+i+""+j);
@@ -30,23 +30,23 @@ public class MayinTarlasi {
 		}
 		do {
 			try {
-				System.out.println("Seçtiğin adresin kordinatlarını gir:");
+				System.out.println("Sirasiyla seÃ§tiÄŸin adresin x ve y kordinatlarÄ±nÄ± gir:");
 				int kordinatx=s.nextInt();
 				int kordinaty=s.nextInt();
 				if(matris[kordinatx][kordinaty]==1) {
-					System.out.println("Mayına bastın :( Puanın: "+puan);
+					System.out.println("MayÄ±na bastÄ±n :( PuanÄ±n: "+puan);
 					break;
 				}
 				else if(kontrolmatrisi[kordinatx][kordinaty]==0){
-					System.out.println("Harika hayattasın hadi devam edelim..");
+					System.out.println("Harika hayattasÄ±n hadi devam edelim..");
 					puan=puan+10;
 					kontrolmatrisi[kordinatx][kordinaty]=1;
 				}
 				else {
-					System.out.println("Daha önce oraya gitmiştin. ");
+					System.out.println("Daha Ã¶nce oraya gitmiÅŸtin. ");
 				}
 			}catch(Exception e) {
-				System.out.println("kordinatların tarla içinen olmalı :) yeniden dene\n");
+				System.out.println("kordinatlarÄ±n tarla iÃ§inen olmalÄ± :) yeniden dene\n");
 			}
 		}while(true);
 	}
